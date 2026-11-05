@@ -36,7 +36,7 @@ Producción usa una clave privada distinta, configurada en el servicio web de Re
 
 ## Base de datos y migraciones
 
-Neon tiene entornos separados `develop` y `production`, con credenciales distintas. El trabajo local de funcionalidades y la integración usan `develop`; el servicio desplegado en Render usa `production`. El Compose local de [GameBook.System](https://github.com/CarlosSV923/GameBook.System) también puede usar su servicio PostgreSQL local.
+Neon tiene entornos separados `develop` y `production`, con credenciales distintas. El trabajo local de funcionalidades y la integración usan `develop`; el servicio desplegado en Render usa `production`. El Compose local de [GameBook.System](https://github.com/CSX-923/GameBook.System) también puede usar su servicio PostgreSQL local.
 
 Aplica migraciones Prisma únicamente mediante [`.github/workflows/migrate-auth.yml`](../.github/workflows/migrate-auth.yml). Los pushes a `develop` que cambian archivos de migración ejecutan el workflow en el entorno GitHub `develop`; una ejecución manual desde `main` usa `production`. El workflow comprueba que `AUTH_DATABASE_DIRECT_URL` use `gamebook_auth_migrator_limited` y se dirija solo al esquema `auth`, valida el esquema Prisma y ejecuta `pnpm db:migrate:deploy` dos veces para verificar la idempotencia. Mantén esta credencial separada del rol runtime. No ejecutes migraciones desde Render, Vercel, Docker Compose ni al iniciar la aplicación.
 
@@ -52,7 +52,7 @@ El servicio web de Render se despliega desde `main`. Swagger UI está disponible
 
 ## Docker
 
-Este repositorio contiene un [`Dockerfile`](../Dockerfile) de estilo productivo que compila el servicio y lo inicia en el puerto `3001`. No contiene un archivo Compose. Para la integración local de varios servicios, usa el Compose documentado en [GameBook.System](https://github.com/CarlosSV923/GameBook.System); Compose no ejecuta las migraciones, que siguen siendo explícitas.
+Este repositorio contiene un [`Dockerfile`](../Dockerfile) de estilo productivo que compila el servicio y lo inicia en el puerto `3001`. No contiene un archivo Compose. Para la integración local de varios servicios, usa el Compose documentado en [GameBook.System](https://github.com/CSX-923/GameBook.System); Compose no ejecuta las migraciones, que siguen siendo explícitas.
 
 ## Comandos de calidad
 

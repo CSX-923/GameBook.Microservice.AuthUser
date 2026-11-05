@@ -2,9 +2,9 @@
 
 [English](README.md) · **Estado: activo — última versión v0.4.0**
 
-[![CI](https://github.com/CarlosSV923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CarlosSV923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml?query=branch%3Amain)
+[![CI](https://github.com/CSX-923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CSX-923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml?query=branch%3Amain)
 
-[![Arquitectura de GameBook AuthUser](architecture/GameBook.Microservice.AuthUser-architecture-es.svg)](https://carlossv923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-architecture-es.html)
+[![Arquitectura de GameBook AuthUser](architecture/GameBook.Microservice.AuthUser-architecture-es.svg)](https://csx-923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-architecture-es.html)
 
 GameBook.Microservice.AuthUser administra las cuentas y la autenticación de GameBook. Guarda usuarios en su esquema PostgreSQL y emite JWT RS256 para el frontend y el servicio Game.
 
@@ -35,9 +35,9 @@ Agrega valores locales privados a `.env`; ejecuta `pnpm test` para las pruebas u
 
 ## Arquitectura
 
-[![Secuencia de solicitudes](architecture/GameBook.Microservice.AuthUser-sequence-es.svg)](https://carlossv923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-sequence-es.html)
+[![Secuencia de solicitudes](architecture/GameBook.Microservice.AuthUser-sequence-es.svg)](https://csx-923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-sequence-es.html)
 
-[Índice de diagramas interactivos](https://carlossv923.github.io/GameBook.Microservice.AuthUser/)
+[Índice de diagramas interactivos](https://csx-923.github.io/GameBook.Microservice.AuthUser/)
 
 El diagrama de arquitectura está al inicio de este README. La capa API gestiona HTTP y la validación; los casos de uso coordinan las reglas de dominio; y los adaptadores de infraestructura proporcionan persistencia Prisma y firma RS256. El registro y el inicio de sesión guardan o consultan un usuario antes de emitir un token; las operaciones protegidas de sesión y cuenta validan ese token.
 
@@ -53,8 +53,8 @@ El diagrama de arquitectura está al inicio de este README. La capa API gestiona
 
 ## Proyectos relacionados
 
-- [GameBook.System](https://github.com/CarlosSV923/GameBook.System) — arquitectura del sistema y Compose de integración local.
-- [GameBook.Microservice.Game](https://github.com/CarlosSV923/GameBook.Microservice.Game) — almacena y sirve los juegos favoritos de las personas usuarias.
-- [GameBook.Frontend](https://github.com/CarlosSV923/GameBook.Frontend) — cliente web para las cuentas y las funciones de juegos.
+- [GameBook.System](https://github.com/CSX-923/GameBook.System) — arquitectura del sistema y Compose de integración local.
+- [GameBook.Microservice.Game](https://github.com/CSX-923/GameBook.Microservice.Game) — almacena y sirve los juegos favoritos de las personas usuarias.
+- [GameBook.Frontend](https://github.com/CSX-923/GameBook.Frontend) — cliente web para las cuentas y las funciones de juegos.
 
 Licencia [MIT](LICENSE). © Carlos Sesme Vera.
