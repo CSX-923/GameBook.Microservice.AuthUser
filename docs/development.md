@@ -36,7 +36,7 @@ Production uses a separate private key configured in the Render web service as `
 
 ## Database and migrations
 
-Neon has separate `develop` and `production` environments with separate credentials. Local feature work and integration use `develop`; the deployed Render service uses `production`. The local Compose in [GameBook.System](https://github.com/CarlosSV923/GameBook.System) can use its local PostgreSQL service instead.
+Neon has separate `develop` and `production` environments with separate credentials. Local feature work and integration use `develop`; the deployed Render service uses `production`. The local Compose in [GameBook.System](https://github.com/CSX-923/GameBook.System) can use its local PostgreSQL service instead.
 
 Apply Prisma migrations only through [`.github/workflows/migrate-auth.yml`](../.github/workflows/migrate-auth.yml). Pushes to `develop` that touch migration inputs run against the GitHub `develop` environment; a manual dispatch from `main` runs against `production`. The workflow checks that `AUTH_DATABASE_DIRECT_URL` uses `gamebook_auth_migrator_limited` and targets only the `auth` schema, validates the Prisma schema, and runs `pnpm db:migrate:deploy` twice to verify idempotence. Keep this credential separate from the runtime role. Do not run migrations from Render, Vercel, Docker Compose, or an application startup command.
 
@@ -52,7 +52,7 @@ The Render web service deploys from `main`. Swagger UI is exposed at `/docs`, wi
 
 ## Docker
 
-This repository contains a production-style [`Dockerfile`](../Dockerfile) that builds the service and starts it on port `3001`. It does not contain a Compose file. For local multi-service integration, use the Compose documented in [GameBook.System](https://github.com/CarlosSV923/GameBook.System); migrations remain explicit and are not run by Compose.
+This repository contains a production-style [`Dockerfile`](../Dockerfile) that builds the service and starts it on port `3001`. It does not contain a Compose file. For local multi-service integration, use the Compose documented in [GameBook.System](https://github.com/CSX-923/GameBook.System); migrations remain explicit and are not run by Compose.
 
 ## Quality commands
 

@@ -2,9 +2,9 @@
 
 [Español](README.es.md) · **Status: active — latest release v0.4.0**
 
-[![CI](https://github.com/CarlosSV923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CarlosSV923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml?query=branch%3Amain)
+[![CI](https://github.com/CSX-923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CSX-923/GameBook.Microservice.AuthUser/actions/workflows/ci.yml?query=branch%3Amain)
 
-[![GameBook AuthUser architecture](architecture/GameBook.Microservice.AuthUser-architecture-en.svg)](https://carlossv923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-architecture-en.html)
+[![GameBook AuthUser architecture](architecture/GameBook.Microservice.AuthUser-architecture-en.svg)](https://csx-923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-architecture-en.html)
 
 GameBook.Microservice.AuthUser manages GameBook accounts and authentication. It stores users in its PostgreSQL schema and issues RS256 JWTs for the frontend and Game service.
 
@@ -35,9 +35,9 @@ Add private local values to `.env`; run `pnpm test` for unit tests and `pnpm tes
 
 ## Architecture
 
-[![Request sequence](architecture/GameBook.Microservice.AuthUser-sequence-en.svg)](https://carlossv923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-sequence-en.html)
+[![Request sequence](architecture/GameBook.Microservice.AuthUser-sequence-en.svg)](https://csx-923.github.io/GameBook.Microservice.AuthUser/GameBook.Microservice.AuthUser-sequence-en.html)
 
-[Interactive diagrams index](https://carlossv923.github.io/GameBook.Microservice.AuthUser/)
+[Interactive diagrams index](https://csx-923.github.io/GameBook.Microservice.AuthUser/)
 
 The architecture diagram is at the top of this README. The API layer handles HTTP and validation, application use cases coordinate domain rules, and infrastructure adapters provide Prisma persistence and RS256 signing. Registration and login persist or load a user before issuing a token; protected session and account operations validate that token.
 
@@ -53,8 +53,8 @@ The architecture diagram is at the top of this README. The API layer handles HTT
 
 ## Related projects
 
-- [GameBook.System](https://github.com/CarlosSV923/GameBook.System) — system architecture and local integration Compose.
-- [GameBook.Microservice.Game](https://github.com/CarlosSV923/GameBook.Microservice.Game) — stores and serves users' favorite games.
-- [GameBook.Frontend](https://github.com/CarlosSV923/GameBook.Frontend) — web client for account and game features.
+- [GameBook.System](https://github.com/CSX-923/GameBook.System) — system architecture and local integration Compose.
+- [GameBook.Microservice.Game](https://github.com/CSX-923/GameBook.Microservice.Game) — stores and serves users' favorite games.
+- [GameBook.Frontend](https://github.com/CSX-923/GameBook.Frontend) — web client for account and game features.
 
 Licensed under the [MIT License](LICENSE). © Carlos Sesme Vera.
