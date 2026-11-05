@@ -17,7 +17,7 @@ GameBook.Microservice.AuthUser manages GameBook accounts and authentication. It 
 
 ## Live API
 
-[Swagger UI](https://gamebook-microservice-authuser.onrender.com/docs) · [OpenAPI JSON](https://gamebook-microservice-authuser.onrender.com/docs/openapi.json). The Render free tier may make the first request slow. The [GameBook Frontend](https://gamebook-frontend.vercel.app) is the client.
+[Swagger UI](https://gamebook-microservice-authuser.onrender.com/docs) · [OpenAPI JSON](https://gamebook-microservice-authuser.onrender.com/docs/openapi.json). The Render free tier may make the first request slow. The [GameBook Frontend](https://gamebook-system.vercel.app) is the client.
 
 ## Quick development
 
